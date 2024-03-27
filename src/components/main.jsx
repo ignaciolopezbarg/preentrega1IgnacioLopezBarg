@@ -17,7 +17,7 @@ function Main() {
       </h2>
       <section class="flex flex-col align items-center justify-center text-green-600 text-xl border-2 rounded 6 border-green-500  ">
       <ItemListContainer greeting="¡Hola desde Coder House!" />
-      <ItemListContainer greeting="¡Hola desde React-Vite-Tailwind!" />
+      <ItemListContainer greeting="¡Hola desde React-Vite-Tailwind!!" />
       </section>
     </main>
   );
