@@ -1,5 +1,5 @@
 import { Bike } from "lucide-react";
-import { ShoppingCart } from "lucide-react";
+// import { ShoppingCart } from "lucide-react";
 
 import Boton from "./cart.jsx";
 import Contador from "./contador.jsx";
@@ -54,17 +54,18 @@ function Header() {
         </div>
         <section className="contenedor-carrito ">
           <Contador numClics={numClics} />
-
-          <Boton>
-            <button class="bg-slate-300 rounded-full w-8 h-5 border-solid border-1 border-red-500 font-medium">
+          <Boton texto="Comprar" esBotonClic={true} manejarClic={manejarClic} />
+          <Boton texto="Reiniciar" esBotonClic={false} manejarClic={reiniciarContador} />
+          {/* <Boton>
+            <button className="bg-slate-300 rounded-full w-8 h-5 border-solid border-1 border-red-500 font-medium">
               texto='Comprar' esBotonClic ={true}
               manejarClic={manejarClic}
             </button>
-            <button class="bg-slate-400 rounded-full w-8 h-5 border-solid border-1 border-red-500 font-medium">
+            <button className="bg-slate-400 rounded-full w-8 h-5 border-solid border-1 border-red-500 font-medium">
               texto='Reiniciar' esBotonClic ={false}
               manejarClic={reiniciarContador}
             </button>
-          </Boton>
+          </Boton> */}
         </section>
       </nav>
     </header>

@@ -16,7 +16,7 @@ function Main() {
       {/* <h2 class="flex justify-center p-3 text 2xl: bold">
         BIENVENIDOS A TODO 2RUEDAS2
       </h2> */}
-      <section class="flex flex-col mt-3 p-3 align items-center justify-center text-green-600 text-xl border-2 rounded 6 border-green-500   ">
+      <section className="flex flex-col mt-3 p-3 align items-center justify-center text-green-600 text-xl border-2 rounded 6 border-green-500   ">
         <ItemListContainer greeting="¡Hola desde Coder House!" />
         <ItemListContainer greeting="¡Hola desde React-Vite-Tailwind!!" />
       </section>
