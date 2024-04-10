@@ -1,5 +1,6 @@
 import { Bike } from "lucide-react";
 import { ShoppingCart } from "lucide-react";
+
 import Boton from "./cart.jsx";
 import Contador from "./contador.jsx";
 import { useState } from "react";
@@ -55,14 +56,14 @@ function Header() {
           <Contador numClics={numClics} />
 
           <Boton>
-            <Button class="bg-slate-300 rounded-full w-8 h-5 border-solid border-1 border-red-500 font-medium">
+            <button class="bg-slate-300 rounded-full w-8 h-5 border-solid border-1 border-red-500 font-medium">
               texto='Comprar' esBotonClic ={true}
               manejarClic={manejarClic}
-            </Button>
-            <Button class="bg-slate-400 rounded-full w-8 h-5 border-solid border-1 border-red-500 font-medium">
+            </button>
+            <button class="bg-slate-400 rounded-full w-8 h-5 border-solid border-1 border-red-500 font-medium">
               texto='Reiniciar' esBotonClic ={false}
               manejarClic={reiniciarContador}
-            </Button>
+            </button>
           </Boton>
         </section>
       </nav>
