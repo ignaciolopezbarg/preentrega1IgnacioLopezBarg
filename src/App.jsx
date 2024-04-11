@@ -1,21 +1,19 @@
-import Header from "./components/header.jsx";
-import Main from "./components/main.jsx";
-import Footer from "./components/footer.jsx";
 import { BrowserRouter } from "react-router-dom";
+import Header from "./components/header.jsx";
+// import Main from "./components/main.jsx";
+import Footer from "./components/footer.jsx";
 
-/*import fetch_pruebas from "./components/fetch_pruebas.jsx";*/
+
+// import Fetch from "./components/fetch_pruebas.jsx";
+// import Gallery from "./components/fetch_pruebas.jsx";
 
 function App() {
   return (
-    <>
-      <Header />
-      <Main />
-      <Footer />
-      <BrowserRouter />
-
-      {/* <fetch_pruebas /> */}
-    </>
-  );
+    <BrowserRouter>
+       <Header /> 
+       <Footer />   
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App
