@@ -1,0 +1,147 @@
+[
+  {
+    "id": "hp_1",
+    "category": "harry_potter",
+    "name": "snape_patronus",
+    "img": "harry_potter/snape-patronus-1.webp"
+  },
+  {
+    "id": "hp_2",
+    "category": "harry_potter",
+    "name": "snape_patronus_box",
+    "img": "harry_potter/snape-patronus-box.webp"
+  },
+  {
+    "id": "hp_3",
+    "category": "harry_potter",
+    "name": "hermione",
+    "img": "harry_potter/hermione-1.webp"
+  },
+  {
+    "id": "hp_4",
+    "category": "harry_potter",
+    "name": "hermione_box",
+    "img": "harry_potter/hermione-box.webp"
+  },
+  {
+    "id": "hp_5",
+    "category": "harry_potter",
+    "name": "luna",
+    "img": "harry_potter/luna-1.webp"
+  },
+  {
+    "id": "hp_6",
+    "category": "harry_potter",
+    "name": "luna_box",
+    "img": "harry_potter/luna-box.webp"
+  },
+  {
+    "id": "hp_7",
+    "category": "harry_potter",
+    "name": "harry",
+    "img": "harry_potter/harry-1.webp"
+  },
+  {
+    "id": "hp_8",
+    "category": "harry_potter",
+    "name": "harry_box",
+    "img": "harry_potter/harry-box.webp"
+  },
+  {
+    "id": "pk_1",
+    "category": "pokemon",
+    "name": "charmander",
+    "img": "pokemon/charmander-1.webp"
+  },
+  {
+    "id": "pk_2",
+    "category": "pokemon",
+    "name": "charmander-box",
+    "img": "pokemon/charmander-box.webp"
+  },
+  {
+    "id": "pk_3",
+    "category": "pokemon",
+    "name": "dragonite",
+    "img": "pokemon/dragonite-1.webp"
+  },
+  {
+    "id": "pk_4",
+    "category": "pokemon",
+    "name": "dragonite-box",
+    "img": "pokemon/dragonite-box.webp"
+  },
+  {
+    "id": "pk_5",
+    "category": "pokemon",
+    "name": "pidgeotto",
+    "img": "pokemon/pidgeotto-1.webp"
+  },
+  {
+    "id": "pk_6",
+    "category": "pokemon",
+    "name": "pidgeotto-box",
+    "img": "pokemon/pidgeotto-box.webp"
+  },
+  {
+    "id": "pk_7",
+    "category": "pokemon",
+    "name": "pikachu",
+    "img": "pokemon/pikachu-1.webp"
+  },
+  {
+    "id": "pk_8",
+    "category": "pokemon",
+    "name": "pikachu-box",
+    "img": "pokemon/pikachu-box.webp"
+  },
+  {
+    "id": "sw_1",
+    "category": "stars_wars",
+    "name": "baby-yoda",
+    "img": "stars_wars/baby-yoda-1.webp"
+  },
+  {
+    "id": "sw_2",
+    "category": "stars_wars",
+    "name": "baby-yoda-box",
+    "img": "stars_wars/baby-yoda-box.webp"
+  },
+  {
+    "id": "sw_3",
+    "category": "stars_wars",
+    "name": "bobbafeth",
+    "img": "stars_wars/bobbafeth-1.webp"
+  },
+  {
+    "id": "sw_4",
+    "category": "stars_wars",
+    "name": "bobbafeth-box",
+    "img": "stars_wars/bobbafeth-box.webp"
+  },
+  {
+    "id": "sw_5",
+    "category": "stars_wars",
+    "name": "luke",
+    "img": "stars_wars/luke-1.webp"
+  },
+  {
+    "id": "sw_6",
+    "category": "stars_wars",
+    "name": "luke-box",
+    "img": "stars_wars/luke-box.webp"
+  },
+  {
+    "id": "sw_7",
+    "category": "stars_wars",
+    "name": "trooper",
+    "img": "stars_wars/trooper-1.webp"
+  },
+  {
+    "id": "sw_8",
+    "category": "stars_wars",
+    "name": "trooper-box",
+    "img": "stars_wars/trooper-box.webp"
+  }
+]
+

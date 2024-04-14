@@ -18,7 +18,7 @@
 
 
 // //
-// // const imageUrl = 'https://raw.githubusercontent.com/ignaciolopezbarg/funkos_img/main/1.jpg';
+//  const imageUrl = 'https://raw.githubusercontent.com/ignaciolopezbarg/funkos_img/main/1.jpg';
 
 
 // fetch(imageUrl)
@@ -26,7 +26,6 @@
 //     if (!response.ok) {
 //       throw new Error('Network response was not ok');
 //     }
-//     // Convierte la respuesta en un blob (objeto binario grande)
 //     return response.blob();
 //   })
 //   .then(blob => {
@@ -92,8 +91,42 @@
 //     </div>
 //   );
 // }
+import React, { useState, useEffect } from 'react';
 
-// export default Gallery;
+const MyComponent = () => {
+  const [imageSrc, setImageSrc] = useState('');
+
+  useEffect(() => {
+    const fetchImage = async () => {
+      try {
+        const response = await fetch('//github.com/ignaciolopezbarg/funkos_img.git');
+        if (!response.ok) {
+          throw new Error('Error al cargar la imagen');
+        }
+        const blob = await response.blob();
+        const imageUrl = URL.createObjectURL(blob);
+        setImageSrc(imageUrl);
+      } catch (error) {
+        console.error('Error al cargar la imagen:', error);
+      }
+    };
+
+    fetchImage();
+
+    // Limpiar la URL del objeto cuando el componente se desmonte para evitar memory leaks
+    return () => URL.revokeObjectURL(imageSrc);
+  }, []); // Ejecutar solo una vez al montar el componente
+
+  return (
+    <div>
+      {imageSrc && <img src={imageSrc} alt="Imagen" />}
+    </div>
+  );
+};
+
+export default MyComponent;
+
+
 
 
   

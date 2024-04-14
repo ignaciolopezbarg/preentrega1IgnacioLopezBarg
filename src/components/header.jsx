@@ -1,13 +1,21 @@
-import Navbar from "./Navbar.jsx";
-function Header() {
-  return (
-    <header className="flex justify-between p-3 rounded-md text-white shadow-md bg-slate-500">
-      <h1 className="border-3-black pt-6 rounded-xl text-center text-4xl font-bold hover:bg-teal-200">
-        FUNKOSHOP
-      </h1>
-      <Navbar />
-    </header>
-  );
-}
 
-export default Header;
+// import { Routes, Route } from "react-router-dom";
+ import Navbar from "./Navbar.jsx";
+
+ function Header() {
+  return (
+    <header className="h-20 flex justify-between p-3 rounded-md text-white shadow-md bg-slate-500">
+      <h1 className="border-3-black pt-3 rounded-xl text-center text-4xl font-bold hover:bg-teal-200">
+        FUNKOSHOP
+     </h1>
+     
+      <Navbar />
+     </header>
+  )
+ }
+ export default Header;
+//  <Routes>
+// //         <Route path="/funkos/harry_potter" element={<HarryPotter />} />
+// //         <Route path="/funkos/pokemon" element={<Pokemon />} />
+// //         <Route path="/funkos/stars_wars" element={<StarsWars />} />
+// //       </Routes> */}
