@@ -8,10 +8,10 @@ import ItemListContainer from "./itemListContainer";
 function Main() {
   return (
     <>
-     <Saludo />
+      <Saludo />
       <Routes>
-        <Route path="/Ofertas" element={<Ofertas />} />
-        <Route path="/Contacto" element={<Contacto />} />
+         <Route path="/Ofertas" element={<Ofertas />} /> 
+         <Route path="/Contacto" element={<Contacto />} /> 
         <Route path="/" element={<ImageList />} />
         <Route path="/img/:id" element={<itemListContainer />} />
       </Routes>
@@ -20,4 +20,8 @@ function Main() {
     </>
   );
 }
+
 export default Main;
+
+
+ 

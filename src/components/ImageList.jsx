@@ -23,7 +23,6 @@ function ImageList() {
     <div className="flex flex-wrap ml-10 max-w-1200 mx-auto ">
      
       {images.map((image) => (
-        
         <div key={image.id} className="m-2 flex flex-col items-center border-2 solid rounded-xl">
           <img
             src={`/img/${image.img}`}
@@ -38,8 +37,11 @@ function ImageList() {
           </div>
         </div>
       ))}
-      
     </div>
   );
 }
+
 export default ImageList;
+
+
+

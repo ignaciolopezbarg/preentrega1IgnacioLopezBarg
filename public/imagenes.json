@@ -4,49 +4,49 @@
     "category": "harry_potter",
     "name": "snape_patronus",
     "img": "harry_potter/snape-patronus-1.webp",
-    "price" : "$1.500"
+    "price": "$1.500"
   },
   {
     "id": "hp_2",
     "category": "harry_potter",
     "name": "snape_patronus_box",
     "img": "harry_potter/snape-patronus-box.webp",
-    "price" : "$1.800"
+    "price": "$1.800"
   },
   {
     "id": "hp_3",
     "category": "harry_potter",
     "name": "hermione",
     "img": "harry_potter/hermione-1.webp",
-    "price" : "$1.400"
+    "price": "$1.400"
   },
   {
     "id": "hp_4",
     "category": "harry_potter",
     "name": "hermione_box",
     "img": "harry_potter/hermione-box.webp",
-    "price" : "$2.500"
+    "price": "$2.500"
   },
   {
     "id": "hp_5",
     "category": "harry_potter",
     "name": "luna",
     "img": "harry_potter/luna-1.webp",
-    "price" : "$1.800"
+    "price": "$1.800"
   },
   {
     "id": "hp_6",
     "category": "harry_potter",
     "name": "luna_box",
     "img": "harry_potter/luna-box.webp",
-    "price" : "$2.200"
+    "price": "$2.200"
   },
   {
     "id": "hp_7",
     "category": "harry_potter",
     "name": "harry",
     "img": "harry_potter/harry-1.webp",
-    "price" : "$1.700"
+    "price": "$1.700"
   },
   {
     "id": "hp_8",
