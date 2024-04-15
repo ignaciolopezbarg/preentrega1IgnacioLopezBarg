@@ -3,145 +3,194 @@
     "id": "hp_1",
     "category": "harry_potter",
     "name": "snape_patronus",
-    "img": "harry_potter/snape-patronus-1.webp"
+    "img": "harry_potter/snape-patronus-1.webp",
+    "price" : "$1.500"
   },
   {
     "id": "hp_2",
     "category": "harry_potter",
     "name": "snape_patronus_box",
-    "img": "harry_potter/snape-patronus-box.webp"
+    "img": "harry_potter/snape-patronus-box.webp",
+    "price" : "$1.800"
   },
   {
     "id": "hp_3",
     "category": "harry_potter",
     "name": "hermione",
-    "img": "harry_potter/hermione-1.webp"
+    "img": "harry_potter/hermione-1.webp",
+    "price" : "$1.400"
   },
   {
     "id": "hp_4",
     "category": "harry_potter",
     "name": "hermione_box",
-    "img": "harry_potter/hermione-box.webp"
+    "img": "harry_potter/hermione-box.webp",
+    "price" : "$2.500"
   },
   {
     "id": "hp_5",
     "category": "harry_potter",
     "name": "luna",
-    "img": "harry_potter/luna-1.webp"
+    "img": "harry_potter/luna-1.webp",
+    "price" : "$1.800"
   },
   {
     "id": "hp_6",
     "category": "harry_potter",
     "name": "luna_box",
-    "img": "harry_potter/luna-box.webp"
+    "img": "harry_potter/luna-box.webp",
+    "price" : "$2.200"
   },
   {
     "id": "hp_7",
     "category": "harry_potter",
     "name": "harry",
-    "img": "harry_potter/harry-1.webp"
+    "img": "harry_potter/harry-1.webp",
+    "price" : "$1.700"
   },
   {
     "id": "hp_8",
     "category": "harry_potter",
     "name": "harry_box",
-    "img": "harry_potter/harry-box.webp"
+    "img": "harry_potter/harry-box.webp",
+    "price" : "$2.500"
   },
   {
     "id": "pk_1",
     "category": "pokemon",
     "name": "charmander",
-    "img": "pokemon/charmander-1.webp"
+    "img": "pokemon/charmander-1.webp",
+    "price" : "$3.500"
   },
   {
     "id": "pk_2",
     "category": "pokemon",
     "name": "charmander-box",
-    "img": "pokemon/charmander-box.webp"
+    "img": "pokemon/charmander-box.webp",
+    "price" : "$4.500"
   },
   {
     "id": "pk_3",
     "category": "pokemon",
     "name": "dragonite",
-    "img": "pokemon/dragonite-1.webp"
+    "img": "pokemon/dragonite-1.webp",
+    "price" : "$2.500"
   },
   {
     "id": "pk_4",
     "category": "pokemon",
     "name": "dragonite-box",
-    "img": "pokemon/dragonite-box.webp"
+    "img": "pokemon/dragonite-box.webp",
+    "price" : "$3.500"
   },
   {
     "id": "pk_5",
     "category": "pokemon",
     "name": "pidgeotto",
-    "img": "pokemon/pidgeotto-1.webp"
+    "img": "pokemon/pidgeotto-1.webp",
+    "price" : "$2.950"
   },
   {
     "id": "pk_6",
     "category": "pokemon",
     "name": "pidgeotto-box",
-    "img": "pokemon/pidgeotto-box.webp"
+    "img": "pokemon/pidgeotto-box.webp",
+    "price" : "$3.500"
   },
   {
     "id": "pk_7",
     "category": "pokemon",
     "name": "pikachu",
-    "img": "pokemon/pikachu-1.webp"
+    "img": "pokemon/pikachu-1.webp",
+    "price" : "$6.500"
   },
   {
     "id": "pk_8",
     "category": "pokemon",
     "name": "pikachu-box",
-    "img": "pokemon/pikachu-box.webp"
+    "img": "pokemon/pikachu-box.webp",
+    "price" : "$7.500"
   },
   {
     "id": "sw_1",
     "category": "stars_wars",
     "name": "baby-yoda",
-    "img": "stars_wars/baby-yoda-1.webp"
+    "img": "stars_wars/baby-yoda-1.webp",
+    "price" : "$8.500"
   },
   {
     "id": "sw_2",
     "category": "stars_wars",
     "name": "baby-yoda-box",
-    "img": "stars_wars/baby-yoda-box.webp"
+    "img": "stars_wars/baby-yoda-box.webp",
+    "price" : "$9.500"
   },
   {
     "id": "sw_3",
     "category": "stars_wars",
     "name": "bobbafeth",
-    "img": "stars_wars/bobbafeth-1.webp"
+    "img": "stars_wars/bobbafeth-1.webp",
+    "price" : "$8.500"
   },
   {
     "id": "sw_4",
     "category": "stars_wars",
     "name": "bobbafeth-box",
-    "img": "stars_wars/bobbafeth-box.webp"
+    "img": "stars_wars/bobbafeth-box.webp",
+    "price" : "$9.500"
   },
   {
     "id": "sw_5",
     "category": "stars_wars",
     "name": "luke",
-    "img": "stars_wars/luke-1.webp"
+    "img": "stars_wars/luke-1.webp",
+    "price" : "$7.500"
   },
   {
     "id": "sw_6",
     "category": "stars_wars",
     "name": "luke-box",
-    "img": "stars_wars/luke-box.webp"
+    "img": "stars_wars/luke-box.webp",
+    "price" : "$8.500"
   },
   {
     "id": "sw_7",
     "category": "stars_wars",
     "name": "trooper",
-    "img": "stars_wars/trooper-1.webp"
+    "img": "stars_wars/trooper-1.webp",
+    "price" : "$6.500"
   },
   {
     "id": "sw_8",
     "category": "stars_wars",
     "name": "trooper-box",
-    "img": "stars_wars/trooper-box.webp"
-  }
+    "img": "stars_wars/trooper-box.webp",
+    "price" : "$6.900"
+  },
+  { "id": "sp_1",
+  "category": "sports",
+  "name": "haland",
+  "img": "sports/haland.jpg",
+  "price" : "$17.500"
+  },
+  {
+    "id": "sp_2",
+  "category": "sports",
+  "name": "haland-box",
+  "img": "sports/haland-box.jpg",
+  "price" : "$19.500"
+  },
+  { "id": "sp3",
+  "category": "sports",
+  "name": "hamilton",
+  "img": "sports/hamilton.jpg",
+  "price" : "$8.500"
+},
+{ "id": "sp4",
+  "category": "sports",
+  "name": "michael_jordan",
+  "img": "sports/michael_jordan.jpg",
+  "price" : "$5.500"
+}
 ]
 

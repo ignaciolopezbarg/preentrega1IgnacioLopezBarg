@@ -8,17 +8,15 @@ function Navbar() {
   return (
     <nav className="flex items-center justify-center gap-2">
       <div className="flex flex-wrap rounded-xl h-20 w-80 p-0 overflow-hidden">
-        <Link to="/" className="flex p-1 pl-2 hover:bg-white ">
-          <img
-            src={Logo}
-            alt="Imagen de la tienda Funkoshop"
-            className= "vibrating-image transition-transform duration-300 ease-in out transform hover:rotate-2"
-          />
-        </Link>
+        <img
+          src={Logo}
+          alt="Imagen de la tienda Funkoshop"
+          className="vibrating-image transition-transform duration-300 ease-in out transform hover:rotate-2"
+        />
       </div>
 
       <div className="hidden md:flex gap-8">
-    <FunkosMenu />
+        <FunkosMenu />
         <Link
           to="/ofertas"
           className="hover:bg-teal-300 hidden md:flex rounded-md"
@@ -26,7 +24,7 @@ function Navbar() {
           Ofertas
         </Link>
         <Link
-          to="/contact"
+          to="/contacto"
           className="hover:bg-teal-300 hidden md:flex rounded-md"
         >
           Contacto
@@ -39,4 +37,4 @@ function Navbar() {
     </nav>
   );
 }
-export default Navbar
+export default Navbar;

@@ -24,7 +24,7 @@ function ImageList() {
      
       {images.map((image) => (
         
-        <div key={image.id} className="m-2 flex flex-col items-center border-2 solid">
+        <div key={image.id} className="m-2 flex flex-col items-center border-2 solid rounded-xl">
           <img
             src={`/img/${image.img}`}
             alt={image.name}
