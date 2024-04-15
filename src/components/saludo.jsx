@@ -8,4 +8,4 @@ function Saludo() {
   )
 }
 
-export default Saludo
+export default Saludo;

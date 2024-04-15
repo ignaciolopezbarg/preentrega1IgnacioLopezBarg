@@ -167,12 +167,7 @@
     "img": "stars_wars/trooper-box.webp",
     "price" : "$6.900"
   },
-  { "id": "sp_1",
-  "category": "sports",
-  "name": "haland",
-  "img": "sports/haland.jpg",
-  "price" : "$17.500"
-  },
+
   {
     "id": "sp_2",
   "category": "sports",
@@ -185,12 +180,7 @@
   "name": "hamilton",
   "img": "sports/hamilton.jpg",
   "price" : "$8.500"
-},
-{ "id": "sp4",
-  "category": "sports",
-  "name": "michael_jordan",
-  "img": "sports/michael_jordan.jpg",
-  "price" : "$5.500"
 }
+
 ]
 

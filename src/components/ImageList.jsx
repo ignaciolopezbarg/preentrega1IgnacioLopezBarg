@@ -20,28 +20,25 @@ function ImageList() {
   }, []);
 
   return (
-    <div className="flex flex-wrap ml-10 max-w-1200 mx-auto ">
-     
-      {images.map((image) => (
-        <div key={image.id} className="m-2 flex flex-col items-center border-2 solid rounded-xl">
-          <img
-            src={`/img/${image.img}`}
-            alt={image.name}
-            className="w-48 h-48 object-cover  "
-          />
-          <div className="mt-2  gap-2 flex flex-col items-center md:flex-row md:justify-between">
-            <p className="text-xxs font-bold">{image.name}</p>
-            <button className="bg-slate-400 w-14 h-6 rounded-md font-serif text-sm text-white">
-              comprar
-            </button>
-          </div>
-        </div>
-      ))}
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-auto max-w-7xl">
+  {images.map((image, index) => (
+    <div key={index} className="border border-gray-200 rounded-lg overflow-hidden">
+      <img
+        src={`/img/${image.img}`}
+        alt={image.name}
+        className="w-full"
+      />
+      <div className="p-4">
+        <p className="text-lg font-semibold">{image.name}</p>
+        <button className="bg-slate-400 w-full rounded-md font-serif text-sm text-white mt-2">
+          Comprar
+        </button>
+      </div>
     </div>
+  ))}
+</div>
+
   );
 }
-
 export default ImageList;
-
-
 
