@@ -20,13 +20,15 @@ function ImageList() {
   }, []);
 
   return (
-    <div className="flex flex-wrap">
+    <div className="flex flex-wrap ml-10 max-w-1200 mx-auto ">
+     
       {images.map((image) => (
-        <div key={image.id} className="m-2 flex flex-col items-center">
+        
+        <div key={image.id} className="m-2 flex flex-col items-center border-2 solid">
           <img
             src={`/img/${image.img}`}
             alt={image.name}
-            className="w-48 h-48 object-cover"
+            className="w-48 h-48 object-cover  "
           />
           <div className="mt-2  gap-2 flex flex-col items-center md:flex-row md:justify-between">
             <p className="text-xxs font-bold">{image.name}</p>
@@ -36,6 +38,7 @@ function ImageList() {
           </div>
         </div>
       ))}
+      
     </div>
   );
 }
