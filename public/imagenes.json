@@ -172,9 +172,11 @@
     "id": "sp1",
     "category": "sports",
     "name": "hamilton",
-    "img": "sports/hamilton.jpg"
-    },
- 
+    "img": "sports/hamilton.jpg",
+    "price": "$12.000"
+
+  },
+
   {
     "id": "sp2",
     "category": "sports",
