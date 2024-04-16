@@ -3,7 +3,7 @@ import React from 'react'
 function HarryPotter() {
   return (
     <div>
-        <span>HARRY POTTER</span>
+        <h1>HARRY POTTER</h1>
     </div>
   )
 }
