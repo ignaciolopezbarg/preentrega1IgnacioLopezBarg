@@ -1,5 +1,5 @@
 
-// import { Routes, Route } from "react-router-dom";
+
  import Navbar from "./Navbar.jsx";
 
  function Header() {
@@ -14,8 +14,3 @@
   )
  }
  export default Header;
-//  <Routes>
-// //         <Route path="/funkos/harry_potter" element={<HarryPotter />} />
-// //         <Route path="/funkos/pokemon" element={<Pokemon />} />
-// //         <Route path="/funkos/stars_wars" element={<StarsWars />} />
-// //       </Routes> */}
