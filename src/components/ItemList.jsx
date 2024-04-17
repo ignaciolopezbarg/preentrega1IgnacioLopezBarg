@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-function ImageList({ setSelectedItem }) {
+function ItemList({ selectedItem, setSelectedItem }) {
   const [images, setImages] = useState([]);
 
   useEffect(() => {
@@ -26,7 +26,10 @@ function ImageList({ setSelectedItem }) {
   };
 
   return (
+    
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-auto max-w-7xl">
+      
+    
       {images.map((image, index) => (
         <div key={index} className="border border-gray-200 rounded-lg overflow-hidden">
           <img src={`/img/${image.img}`} alt={image.name} className="w-full" />
@@ -45,7 +48,7 @@ function ImageList({ setSelectedItem }) {
   );
 }
 
-export default ImageList;
+export default ItemList;
 
 
 
