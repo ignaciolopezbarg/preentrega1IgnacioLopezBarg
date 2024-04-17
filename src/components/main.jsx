@@ -12,7 +12,7 @@ function Main() {
       <Saludo />
 
       <ImageList setSelectedItem={setSelectedItem} />
-      <ItemList setSelectedItem={setSelectedItem} />    
+      {/* <ItemList setSelectedItem={setSelectedItem} />     */}
     </>
   );
 }
