@@ -26,9 +26,7 @@ function App() {
         <Route path="/funkos/harry_potter" element={<HarryPotter />} />
         <Route path="/funkos/stars_wars" element={<StarsWars />} />
         <Route path="/funkos/pokemon" element={<Pokemon />} />
-        <Route
-          path="/item/:itemId"
-          element={<ItemList />}
+        <Route path="/item/:itemId"  element={<ItemList />}
         />
       </Routes>
 
