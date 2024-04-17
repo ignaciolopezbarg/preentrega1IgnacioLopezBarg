@@ -1,8 +1,9 @@
 // import { Route, Routes } from "react-router-dom";
 import ImageList from "./ImageList";
+import ItemList from "./ItemList";
 
 import Saludo from "./saludo";
-// import ItemListContainer from "./itemListContainer";
+
 
 function Main() {
   return (
@@ -10,6 +11,8 @@ function Main() {
       <Saludo />
 
       <ImageList />
+      <ItemList />
+    
     </>
   );
 }
