@@ -1,6 +1,6 @@
 
-import React, { useState } from "react";
-import { BrowserRouter } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/header.jsx";
 import Footer from "./components/footer.jsx";
 import Main from "./components/main.jsx";
@@ -11,10 +11,24 @@ import StarsWars from "./pages/StarsWars.jsx";
 import Pokemon from "./pages/Pokemon.jsx";
 import ItemList from "./components/ItemList.jsx";
 
-import { Route, Routes } from "react-router-dom";
-
 function App() {
-  const [selectedItem, setSelectedItem] = useState(null);
+  const [images, setImages] = useState([]);
+
+  useEffect(() => {
+    fetch("/imagenes.json")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Error al cargar los datos");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setImages(data);
+      })
+      .catch((error) => {
+        console.error("Error al buscar los datos:", error);
+      });
+  }, []);
 
   return (
     <BrowserRouter>
@@ -26,12 +40,12 @@ function App() {
         <Route path="/funkos/harry_potter" element={<HarryPotter />} />
         <Route path="/funkos/stars_wars" element={<StarsWars />} />
         <Route path="/funkos/pokemon" element={<Pokemon />} />
-        <Route path="/item/:itemId"  element={<ItemList />}  />
+        <Route path="/item/:itemId" element={<ItemList images={images} />} />
       </Routes>
-
       <Footer />
     </BrowserRouter>
   );
 }
 
 export default App;
+

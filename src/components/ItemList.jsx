@@ -1,54 +1,46 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 
-function ItemList({ selectedItem, setSelectedItem }) {
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+
+function ItemList() {
+  const { itemId } = useParams();
   const [images, setImages] = useState([]);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("/imagenes.json");
+    fetch("/imagenes.json")
+      .then((response) => {
         if (!response.ok) {
-          throw new Error("Error al cargar los datos de las imágenes");
+          throw new Error("Error al cargar los datos");
         }
-        const data = await response.json();
+        return response.json();
+      })
+      .then((data) => {
         setImages(data);
-      } catch (error) {
-        console.error("Error al buscar los datos de las imágenes:", error);
-      }
-    };
-
-    fetchData();
+      })
+      .catch((error) => {
+        console.error("Error al buscar los datos:", error);
+      });
   }, []);
 
-  const handleBuyClick = (itemId) => {
-    setSelectedItem(itemId);
-  };
+  const selectedItem = images.find((image) => image.id === itemId);
+
+  if (!selectedItem) {
+    return <div>Loading...</div>; // O cualquier indicador de carga que desees mostrar
+  }
 
   return (
-    
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-auto max-w-7xl">
-      
-    
-      {images.map((image, index) => (
-        <div key={index} className="border border-gray-200 rounded-lg overflow-hidden">
-          <img src={`/img/${image.img}`} alt={image.name} className="w-full" />
-          <div className="p-4">
-            <p className="text-lg font-semibold">{image.name}</p>
-            <button
-              onClick={() => handleBuyClick(image.id)}
-              className="bg-slate-400 w-full rounded-md font-serif text-sm text-white mt-2"
-            >
-              Comprar
-            </button>
-          </div>
-        </div>
-      ))}
+    <div className="border border-gray-200 rounded-lg overflow-hidden">
+      <img src={`/img/${selectedItem.img}`} alt={selectedItem.name} className="w-full" />
+      <div className="p-4">
+        <p className="text-lg font-semibold">{selectedItem.name}</p>
+        <p className="text-lg font-semibold">{selectedItem.price}</p>
+      </div>
     </div>
   );
 }
 
 export default ItemList;
+
 
 
 

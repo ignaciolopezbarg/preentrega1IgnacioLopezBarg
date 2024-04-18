@@ -1,11 +1,10 @@
-import React from "react";
+import React from 'react'
 
 function Pokemon() {
   return (
-    <div>
-      <h2>POKEMON</h2>
-    </div>
-  );
+    <div>Pokemon</div>
+  )
 }
 
-export default Pokemon;
+export default Pokemon
+
