@@ -33,14 +33,14 @@ Esperando carga...
 
   return (
     
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-auto max-w-7xl">
+    <div className=" flex flex-col p-5  justify-center  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-auto max-w-8xl">
       {selectedItem && (
-        <div className="border border-gray-200 rounded-lg overflow-hidden shadow-lg">
+        <div className="border border-gray-700 bg-slate-300 rounded-lg overflow-hidden shadow-lg">
           <img src={`/img/${selectedItem.img}`} alt={selectedItem.name} className="w-full h-64 object-cover" />
           <div className="p-4">
-            <p className="text-lg font-semibold mb-2">{selectedItem.name}</p>
-            <p className="text-gray-700">{selectedItem.price}</p>
-            <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mt-2">
+            <p className=" ml-20 text-lg font-semibold mb-2">{selectedItem.name}</p>
+            <p className="text-gray-700 font-bold text-xl  ml-20"  >{selectedItem.price}</p>
+            <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mt-2 ml-20">
               Comprar
             </button>
           </div>
