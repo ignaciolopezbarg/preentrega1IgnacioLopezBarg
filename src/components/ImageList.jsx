@@ -38,7 +38,7 @@ function ImageList({ setSelectedItem }) {
               onClick={() => handleBuyClick(image.id)}
               className="bg-slate-400 w-full rounded-md font-serif text-sm text-white mt-2"
             >
-              Comprar
+              Ver Detalle
             </Link>
           </div>
         </div>
