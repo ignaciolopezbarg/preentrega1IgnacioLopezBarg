@@ -36,7 +36,7 @@ function ItemList() {
       </div>
 
       <div
-        className=" flex flex-col p-5  justify-center  grid-cols-1 
+        className=" flex flex-col p-1  justify-center  grid-cols-1 
      gap-4 mx-auto max-w-8xl"
       >
         {selectedItem && (

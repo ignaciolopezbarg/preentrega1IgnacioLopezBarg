@@ -126,6 +126,10 @@ const MyComponent = () => {
 
 export default MyComponent;
 
+const url= 'https://api.mercadopago.com/v1/payments?access token=123432'
+fetch ('url')
+
+
 
 
 
