@@ -23,26 +23,32 @@ function Contacto() {
             onMouseLeave={handleronMouseLeave}
             type="text"
             placeholder="Nombre"
-            className= "text-black w-1/2 h-10 mx-auto mb-4 rounded-md shadow-md"
+            className="text-black w-1/2 h-10 mx-auto mb-4 rounded-md shadow-md"
           />
           {/* {aviso && <p>Complete su nombre y apellido</p>} */}
 
           <input
-          onMouseLeave={handleronMouseLeave}
+            onMouseLeave={handleronMouseLeave}
             type="text"
             placeholder="Apellido"
             className="text-black w-1/2 h-10 mx-auto mb-4 rounded-md shadow-md"
           />
           {aviso && <p>Complete su nombre y apellido</p>}
-          <input type="email"
-          placeholder="email"
-          className="text-black w-1/2 h-10 mx-auto mb-4 rounded-md shadow-md" />
-          <input type="password" placeholder="ingrese su clave"
-          className="text-black  w-1/2 h-10 mx-auto mb-4 rounded-md shadow-md" />
-         <button class="bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-  Ingresar
-</button>
+          <input
+            type="email"
+            placeholder="email"
+            className="text-black w-1/2 h-10 mx-auto mb-4 rounded-md shadow-md"
+          />
+          <input
+            type="password"
+            placeholder="ingrese su clave"
+            className="text-black  w-1/2 h-10 mx-auto mb-4 rounded-md shadow-md"
+          />
+          
 
+          <button class="bg-blue-400 hover:bg-blue-700 text-white w-1/5 mx-auto font-bold py-2 px-4 rounded">
+            Ingresar
+          </button>
         </div>
       </form>
     </div>
