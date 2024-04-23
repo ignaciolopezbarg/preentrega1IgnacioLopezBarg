@@ -19,7 +19,7 @@ function StarsWars() {
     <div className="grid grid-cols-3 gap-4 p-4">
       {starswarsItems.map(item => (
         <div key={item.id} className="bg-gray-200 p-4">
-          <img src={item.img} alt={item.name} className="mx-auto" />
+         <img src={`/img/${item.img}`} alt={item.name} className="mx-auto" />
           <h2 className="text-lg font-bold">{item.name}</h2>
           <p className="text-gray-700">{item.price}</p>
         </div>
