@@ -3,21 +3,21 @@ import { useParams } from 'react-router-dom';
 
 function HarryPotter() {
   const { category } = useParams();
-  const [items, setItems] = useState([]);
+  const [harrypotterItems, setHarrypotterItems] = useState([]);
 
   useEffect(() => {
-    fetch('public.json')
+    fetch('/imagenes.json')
       .then(response => response.json())
       .then(data => {
-        const filteredData = data.filter(item => item.category === category);
-        setItems(filteredData);
+        const harrypotterItems = data.filter(item => item.category === 'harrypotter');
+        setHarrypotterItems(harrypotterItems);
       })
       .catch(error => console.error('Error fetching data:', error));
-  }, [category]);
+  }, []);
 
   return (
     <div className="grid grid-cols-3 gap-4 p-4">
-      {items.map(item => (
+      {harrypotterItems.map(item => (
         <div key={item.id} className="bg-gray-200 p-4">
           <img src={item.img} alt={item.name} className="mx-auto" />
           <h2 className="text-lg font-bold">{item.name}</h2>

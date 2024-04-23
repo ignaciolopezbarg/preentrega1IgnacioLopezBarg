@@ -3,21 +3,21 @@ import { useParams } from 'react-router-dom';
 
 function Pokemon() {
   const { category } = useParams();
-  const [items, setItems] = useState([]);
+  const [pokemonItems, setPokemonItems] = useState([]);
 
   useEffect(() => {
-    fetch('/imagenes.json') // Reemplaza 'tu_archivo.json' con la ubicación de tu archivo JSON
+    fetch('/imagenes.json')
       .then(response => response.json())
       .then(data => {
-        const categoryItems = data.filter(item => item.category === category);
-        setItems(categoryItems);
+        const pokemonItems = data.filter(item => item.category === 'pokemon');
+        setPokemonItems(pokemonItems);
       })
       .catch(error => console.error('Error fetching data:', error));
-  }, [category]);
+  }, []);
 
   return (
     <div className="grid grid-cols-3 gap-4 p-4">
-      {items.map(item => (
+      {pokemonItems.map(item => (
         <div key={item.id} className="bg-gray-200 p-4">
           <img src={item.img} alt={item.name} className="mx-auto" />
           <h2 className="text-lg font-bold">{item.name}</h2>
@@ -29,5 +29,6 @@ function Pokemon() {
 }
 
 export default Pokemon;
+
 
 
