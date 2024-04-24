@@ -8,13 +8,12 @@ function Navbar() {
   return (
     <nav className="flex items-center justify-center gap-2">
       <div className="flex flex-wrap rounded-xl h-20 max-w-1200 mx-auto p-0 overflow-hidden">
-        
         <Link to="/">
-        <img
-          src={Logo}
-          alt="Imagen de la tienda Funkoshop"
-          className="vibrating-image transition-transform duration-300 ease-in out transform hover:rotate-2"
-        />
+          <img
+            src={Logo}
+            alt="Imagen de la tienda Funkoshop"
+            className="vibrating-image transition-transform duration-300 ease-in out transform hover:rotate-2"
+          />
         </Link>
       </div>
 

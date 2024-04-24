@@ -28,11 +28,12 @@ function ItemList() {
 
     <div>Esperando carga...</div>;
   }
-
   return (
     <>
       <div>
-        <h1 className="item__encabezado p-5 flex justify-center text-3xl font-bold"> BIENVENIDO A LA PAGINA DE COMPRAS </h1>
+        <h1 className="item__encabezado p-5 flex justify-center text-3xl font-bold">
+          BIENVENIDO A LA PAGINA DE COMPRAS
+        </h1>
       </div>
 
       <div
@@ -52,6 +53,9 @@ function ItemList() {
               </p>
               <p className="text-gray-700 font-bold text-xl  ml-20">
                 {selectedItem.price}
+              </p>
+              <p className="text-gray-700  text-xl  ml-20"> <span>Stock:</span>
+                {selectedItem.stock}
               </p>
               <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mt-2 ml-20">
                 Comprar
