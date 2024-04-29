@@ -130,7 +130,7 @@
   },
   {
     "id": "sw_1",
-    "category": "stars_wars",
+    "category": "starswars",
     "name": "baby-yoda",
     "img": "stars_wars/baby-yoda-1.webp",
     "price": "$8.500",

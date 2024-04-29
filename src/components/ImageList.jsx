@@ -1,24 +1,48 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { app } from "../firebase";
+import { getFirestore, collection, getDocs } from "firebase/firestore";
 
 function ImageList({ setSelectedItem }) {
   const [images, setImages] = useState([]);
 
   useEffect(() => {
-    fetch("/imagenes.json")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Error al cargar los datos");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        setImages(data);
+    // const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    const idCollection = collection(db, "id");
+    const query = getDocs(idCollection);
+
+    //esto trae asi una promesa, por eso:
+    query
+      .then((resultado) => {
+        console.log(resultado);
+        console.log(resultado.docs); //valores que trae la consulta
+        //console.log(resultado.empty)
+        //console.log(resultado.size)
+        const productos = resultado.docs.map((doc) => {
+          return doc.data();
+        });
+        setImages(productos);
       })
       .catch((error) => {
-        console.error("Error busqueda de los datos:", error);
+        console.log(error);
       });
-  }, []);
+  });
+
+  //   fetch("/imagenes.json")
+  //     .then((response) => {
+  //       if (!response.ok) {
+  //         throw new Error("Error al cargar los datos");
+  //       }
+  //       return response.json();
+  //     })
+  //     .then((data) => {
+  //       setImages(data);
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error busqueda de los datos:", error);
+  //     });
+  // }, []);
 
   const handleBuyClick = (itemId) => {
     const selectedItem = images.find((image) => image.id === itemId);
@@ -26,7 +50,10 @@ function ImageList({ setSelectedItem }) {
   };
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-auto max-w-7xl">
+    <div>
+      <div><p className="text-4xl text-blue-500 text-bold text-center">Bienvenidos a FUNKOSHOP</p></div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-4 gap-4 mx-auto max-w-7xl">
+    
       {images.map((image, index) => (
         <div
           key={index}
@@ -46,7 +73,9 @@ function ImageList({ setSelectedItem }) {
         </div>
       ))}
     </div>
+    </div>
   );
 }
 
 export default ImageList;
+
