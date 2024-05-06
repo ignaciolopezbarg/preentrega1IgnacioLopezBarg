@@ -1,18 +1,52 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { getProducts } from "../utils";
+import { app } from "../firebase";
+import { getFirestore, collection, getDocs } from "firebase/firestore";
+import { initializeApp } from "firebase/app";
 
 function ImageList({ setSelectedItem }) {
   const [images, setImages] = useState([]);
 
   useEffect(() => {
-    getProducts()
-    .then((resultado)=>{
-      //console.log(resultado) lo que envia la bd
-      setImages(resultado)
-    })
-       
+   
+    //const app = initializeApp(firebaseConfig)
+    //acceso a la bd del proyecto(getFirestore)
+  //  const db = getFirestore(app);
+    //acceso a mi coleccion (que se llama id)
+  //  const idCollection = collection(db, "id");
+  //  const query = getDocs(idCollection);
+
+   // query
+    //  .then((resultado) => {
+        //       console.log(resultado);
+        //       console.log(resultado.docs); //valores que trae la consulta
+        //       console.log(resultado.empty)
+        //       console.log(resultado.size)
+     //   const productos = resultado.docs.map((doc) => {
+       //   return doc.data();
+       // })
+       // setImages(productos)
       })
+    //  .catch((error) => {
+    //    console.log(error);
+   //   });
+ // });
+
+  //    fetch("/imagenes.json")
+  //      .then((response) => {
+  //        if (!response.ok) {
+  //          throw new Error("Error al cargar los datos");
+  //        }
+  //        return response.json();
+  //      })
+  //      .then((data) => {
+  //        setImages(data);
+  //      })
+  //      .catch((error) => {
+  //        console.error("Error busqueda de los datos:", error);
+  //     });
+  //  }, []);
 
   const handleBuyClick = (itemId) => {
     const selectedItem = images.find((image) => image.id === itemId);

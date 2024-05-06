@@ -1,18 +1,12 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyA3NmAW33QRLBjMY6gA_E9K3CYA1qu0dmc",
-  authDomain: "funkos-14890.firebaseapp.com",
-  projectId: "funkos-14890",
-  storageBucket: "funkos-14890.appspot.com",
-  messagingSenderId: "795161462437",
-  appId: "1:795161462437:web:9a85cc9fb509b294d0af4c"
+  apiKey: "AIzaSyDZEKjDzBR53_K-ztycmmh2-uTg_V9u8WQ",
+  authDomain: "funkoshop-81cdb.firebaseapp.com",
+  projectId: "funkoshop-81cdb",
+  storageBucket: "funkoshop-81cdb.appspot.com",
+  messagingSenderId: "954459579713",
+  appId: "1:954459579713:web:a22fbe8660e933391a6dc0"
 };
 
-// Initialize Firebase
 export const app = initializeApp(firebaseConfig);

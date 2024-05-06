@@ -1,18 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { getProductsFromCategories3 } from '../utils';
 
 function HarryPotter() {
   const { category } = useParams();
   const [harrypotterItems, setHarrypotterItems] = useState([]);
 
   useEffect(() => {
-    fetch('/imagenes.json')
-      .then(response => response.json())
-      .then(data => {
-        const harrypotterItems = data.filter(item => item.category === 'harrypotter');
-        setHarrypotterItems(harrypotterItems);
-      })
-      .catch(error => console.error('Error fetching data:', error));
+    // fetch('/imagenes.json')
+    //   .then(response => response.json())
+    //   .then(data => {
+    //     const harrypotterItems = data.filter(item => item.category === 'harrypotter');
+    //     setHarrypotterItems(harrypotterItems);
+    //   })
+    //   .catch(error => console.error('Error fetching data:', error));
+    getProductsFromCategories3()
   }, []);
 
   return (

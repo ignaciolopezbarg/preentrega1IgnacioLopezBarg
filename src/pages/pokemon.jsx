@@ -1,19 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { getProductsFromCategories } from '../utils';
 
 function Pokemon() {
-  const { category } = useParams();
+  const {categoria}  = useParams();
   const [pokemonItems, setPokemonItems] = useState([]);
 
-  useEffect(() => {
-    fetch('/imagenes.json')
-      .then(response => response.json())
-      .then(data => {
-        const pokemonItems = data.filter(item => item.category === 'pokemon');
-        setPokemonItems(pokemonItems);
-      })
-      .catch(error => console.error('Error fetching data:', error));
-  }, []);
+  useEffect((categoria) => {
+    getProductsFromCategories()
+    //  fetch('/imagenes.json')
+    //    .then(response => response.json())
+    //    .then(data => {
+    //      const pokemonItems = data.filter(item => item.category === 'pokemon');
+    //      setPokemonItems(pokemonItems);
+    //   })
+    //    .catch(error => console.error('Error fetching data:', error));
+   }, []);
 
   return (
     <div className="grid grid-cols-3 gap-4 p-4">

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Input from "../components/Input";
 
 function Contacto() {
   const [aviso, setAviso] = useState(false);
@@ -44,12 +45,31 @@ function Contacto() {
             placeholder="ingrese su clave"
             className="text-black  w-1/2 h-10 mx-auto mb-4 rounded-md shadow-md"
           />
-          
 
           <button class="bg-blue-400 hover:bg-blue-700 text-white w-1/5 mx-auto font-bold py-2 px-4 rounded">
             Ingresar
           </button>
         </div>
+      </form>
+      <form action="">
+        //Sector prueba:
+        <Input
+          placeholder="ingrese su edad"
+          type="number"
+          id="number"
+          text="edad"
+        />
+        <Input 
+        text="nombre"
+        type="text"
+        id= "nombre"
+        />
+        <Input
+          placeholder="ingrese su email"
+          text="Email"
+          type="email"
+          id="email"
+        />
       </form>
     </div>
   );

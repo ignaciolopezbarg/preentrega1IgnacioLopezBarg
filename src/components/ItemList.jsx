@@ -1,40 +1,36 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+ import { useParams } from "react-router-dom";
+ import { getProductDetail } from "../utils";
 
-function ItemList() {
-  const { itemId } = useParams();
-  const [images, setImages] = useState([]);
+ function ItemList() {
+   const { id } = useParams();
+   const [images, setImages] = useState([]);
 
-  useEffect(() => {
-    fetch("/imagenes.json")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Error al cargar los datos");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        setImages(data);
-      })
-      .catch((error) => {
-        console.error("Error al buscar los datos:", error);
-      });
-  }, []);
+    useEffect(() => {
+     getProductDetail(id)
+     .then((resultado) => {
+      setImages(resultado)
+     })
+    .catch((error)=>{
+     console.log('Error al buscar archivo')
+    })
+   }, [id]);
 
-  const selectedItem = images.find((image) => image.id === itemId);
+ const selectedItem = images.find((image) => image.id === id);
+   
 
-  if (!selectedItem) {
-    return;
+   if (!selectedItem) {
+     return
 
     <div>Esperando carga...</div>;
-  }
+  } else {
   return (
     <>
       <div>
         <h1 className="item__encabezado p-5 flex justify-center text-3xl font-bold">
           BIENVENIDO A LA PAGINA DE COMPRAS
         </h1>
-      </div>
+       </div>
 
       <div
         className=" flex flex-col p-1  justify-center  grid-cols-1 
@@ -57,15 +53,19 @@ function ItemList() {
               <p className="text-gray-700  text-xl  ml-20"> <span>Stock:</span>
                 {selectedItem.stock}
               </p>
-              <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mt-2 ml-20">
-                Comprar
+              <p className="text-gray-700 text-md  ml-20"> <span className="">Descripcion</span>
+                { selectedItem.description }
+              </p>
+             <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mt-2 ml-20">                 Comprar
               </button>
             </div>
           </div>
-        )}
-      </div>
-    </>
+         )}
+     </div>
+     </>
   );
-}
+ }
+ }
+ export default ItemList;
 
-export default ItemList;
+

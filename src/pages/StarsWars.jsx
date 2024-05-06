@@ -1,18 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { getProductsFromCategories2 } from '../utils';
 
 function StarsWars() {
   const { category } = useParams();
   const [starswarsItems, setStarswarsItems] = useState([]);
 
   useEffect(() => {
-    fetch('/imagenes.json')
-      .then(response => response.json())
-      .then(data => {
-        const starswarsItems = data.filter(item => item.category === 'starswars');
-        setStarswarsItems(starswarsItems);
-      })
-      .catch(error => console.error('Error fetching data:', error));
+    getProductsFromCategories2()
+    // fetch('/imagenes.json')
+    //   .then(response => response.json())
+    //   .then(data => {
+    //     const starswarsItems = data.filter(item => item.category === 'starswars');
+    //     setStarswarsItems(starswarsItems);
+    //   })
+    //   .catch(error => console.error('Error fetching data:', error));
   }, []);
 
   return (
@@ -29,3 +31,4 @@ function StarsWars() {
 }
 
 export default StarsWars;
+
