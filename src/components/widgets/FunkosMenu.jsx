@@ -20,13 +20,13 @@ function FunkosMenu() {
       </button>
       {isOpen && (
         <div className=" absolute top-full left-0  bg-black shadow-lg rounded-md p-2">
-          <Link to="/category/harry_potter" className="block hover:text-blue-500">
+          <Link to="/category/harrypotter" className="block hover:text-blue-500">
             <span className="submenu__title"> harrypotter</span>
           </Link>
           <Link to="/category/pokemon" className="block hover:text-blue-500">
             <span className="submenu__title">pokemon</span>
           </Link>
-          <Link to="/category/stars_wars" className="block hover:text-blue-500">
+          <Link to="/category/starswars" className="block hover:text-blue-500">
             <span className="submenu__title">starswars</span>
           </Link>
         </div>
