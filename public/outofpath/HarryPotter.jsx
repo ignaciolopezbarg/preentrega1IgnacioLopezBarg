@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { getProductsFromCategories3 } from '../utils';
+import { getProductsFromCategories3 } from '../../src/utils';
 
 function HarryPotter() {
   const { category } = useParams();
