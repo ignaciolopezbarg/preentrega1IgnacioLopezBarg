@@ -29,7 +29,7 @@ import { app } from "./firebase";
  export const getProductsFromCategories = (categoria) => {
      const db = getFirestore(app)
      const muñecosCollection = collection(db, "muñecos")
-     const filtro = query(muñecosCollection,where("category", "==", "categoria"))
+     const filtro = query(muñecosCollection,where("categoria", "==", "category"))
      const consulta = getDocs(filtro)
      return consulta
      .then((resultado) => {
