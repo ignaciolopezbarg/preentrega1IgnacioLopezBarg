@@ -22,7 +22,7 @@ function Navbar() {
         <FunkosMenu />
 
         <Link
-          to="/Contacto"
+          to="/Contact"
           className="hover:bg-teal-300 hidden md:flex rounded-md"
         >
           Contacto

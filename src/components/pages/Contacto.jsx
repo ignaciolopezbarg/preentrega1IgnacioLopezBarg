@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-//import Input from '../widgets/Input';
+import Input from '../widgets/Input';
 
 function Contacto() {
   const [aviso, setAviso] = useState(false);
