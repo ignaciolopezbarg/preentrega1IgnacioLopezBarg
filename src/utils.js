@@ -29,7 +29,7 @@ import { app } from "./firebase";
  export const getProductsFromCategories = (categoria) => {
      const db = getFirestore(app)
      const muñecosCollection = collection(db, "muñecos")
-     const filtro = query(muñecosCollection,where("categoria", "==", "category"))
+     const filtro = query(muñecosCollection, where("category", "==", categoria))
      const consulta = getDocs(filtro)
      return consulta
      .then((resultado) => {
@@ -48,23 +48,69 @@ import { app } from "./firebase";
      });
  };
 
-  export const getProductDetail = (id) => {
-     const db = getFirestore(app)
-     const muñecosCollection = collection(db,"muñecos")
-     const filtro = doc(muñecosCollection,id)
-     const consulta = getDoc(filtro) 
+  // export const getProductDetail = (id) => {
+  //    const db = getFirestore(app)
+  //    const muñecosCollection = collection(db,"muñecos")
+  //    const filtro = doc(muñecosCollection,id)
+  //    const consulta = getDoc(filtro) 
 
-   return consulta
-     .then ((resultado)=>{
+  //  return consulta
+  //    .then ((resultado)=>{
         
-         const producto = resultado.data()
-         producto.id = resultado.id
-         return producto
-    })
-   .catch((error)=>{
-         console.log(error)
-     })
+  //        const producto = resultado.data()
+  //        producto.id = resultado.id
+  //        return producto
+  //   })
+  //  .catch((error)=>{
+  //        console.log(error)
+  //    })
+  //     }
+//   export const getProductDetail = (id) => {
+//     const db = getFirestore(app);
+//     const muñecosCollection = collection(db, "muñecos");
+//     const filtro = doc(muñecosCollection, id);
+//     const consulta = getDoc(filtro);
+
+//     return consulta
+//         .then((resultado) => {
+//             if (resultado.exists()) {
+//                 const producto = resultado.data();
+//                 producto.id = resultado.id;
+//                 return producto;
+//             } else {
+//                 throw new Error("El producto no existe");
+//             }
+//         })
+//         .catch((error) => {
+//             console.log(error);
+//             throw error; 
+//         });
+// };
+export const getProductDetail = async (id) => {
+  try {
+      const db = getFirestore(app);
+      const muñecosCollection = collection(db, "muñecos");
+      const filtro = doc(muñecosCollection, id);
+      const consulta = await getDoc(filtro);
+
+      if (consulta.exists()) {
+          const producto = consulta.data();
+          producto.id = consulta.id;
+          return producto;
+      } else {
+          throw new Error("El producto no existe");
       }
+  } catch (error) {
+      console.log(error);
+      throw error; // Propaga el error para que sea manejado por quien llama a esta función
+  }
+};
+
+
+  
+  
+
+
       export const createSale = () =>{
 const db= getFirestore(app)
 const salesCollection = collection(db,"ventas")
