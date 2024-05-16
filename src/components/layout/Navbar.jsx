@@ -6,10 +6,7 @@ import CartWidget from "../widgets/CartWidget";
 
 
 function Navbar() {
-  //const [open, setOpen] = useState(false)
-  // const handleClick = ()=>{
-  //   setOpen (!open)
-  // }
+
   return (
     <nav className="flex items-center justify-center gap-2">
       <div className="flex flex-wrap rounded-xl h-20 max-w-1200 mx-auto p-0 overflow-hidden">

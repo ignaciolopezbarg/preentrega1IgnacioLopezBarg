@@ -1,8 +1,18 @@
-import { getFirestore, getDocs,getDoc, doc, collection,query, where, addDoc, serverTimestamp } from "firebase/firestore";
+import {
+  getFirestore,
+  getDocs,
+  getDoc,
+  doc,
+  collection,
+  query,
+  where,
+  addDoc,
+  serverTimestamp,
+} from "firebase/firestore";
 import { app } from "./firebase";
 
-  export const getProducts = () => {
-  const db = getFirestore(app)
+export const getProducts = () => {
+  const db = getFirestore(app);
 
   const muñecosCollection = collection(db, "muñecos");
 
@@ -17,118 +27,70 @@ import { app } from "./firebase";
         const producto = doc.data();
         producto.id = doc.id;
 
-        return producto
-      })
+        return producto;
+      });
       return productos;
     })
     .catch((error) => {
       console.log(error);
+    });
+};
+
+export const getProductsFromCategories = (categoria) => {
+  const db = getFirestore(app);
+  const muñecosCollection = collection(db, "muñecos");
+  const filtro = query(muñecosCollection, where("category", "==", categoria));
+  const consulta = getDocs(filtro);
+  return consulta
+    .then((resultado) => {
+      const productos = resultado.docs.map((doc) => {
+        const producto = doc.data();
+        producto.id = doc.id;
+
+        return producto;
+      });
+      return productos;
     })
-}
+    .catch((error) => {
+      console.log(error);
+    });
+};
 
- export const getProductsFromCategories = (categoria) => {
-     const db = getFirestore(app)
-     const muñecosCollection = collection(db, "muñecos")
-     const filtro = query(muñecosCollection, where("category", "==", categoria))
-     const consulta = getDocs(filtro)
-     return consulta
-     .then((resultado) => {
-      
-       const productos = resultado.docs.map((doc) => {
-       
-        const producto = doc.data()
-         producto.id = doc.id
-
-         return producto;
-       });
-       return productos;
-     })
-     .catch((error) => {
-       console.log(error);
-     });
- };
-
-  // export const getProductDetail = (id) => {
-  //    const db = getFirestore(app)
-  //    const muñecosCollection = collection(db,"muñecos")
-  //    const filtro = doc(muñecosCollection,id)
-  //    const consulta = getDoc(filtro) 
-
-  //  return consulta
-  //    .then ((resultado)=>{
-        
-  //        const producto = resultado.data()
-  //        producto.id = resultado.id
-  //        return producto
-  //   })
-  //  .catch((error)=>{
-  //        console.log(error)
-  //    })
-  //     }
-//   export const getProductDetail = (id) => {
-//     const db = getFirestore(app);
-//     const muñecosCollection = collection(db, "muñecos");
-//     const filtro = doc(muñecosCollection, id);
-//     const consulta = getDoc(filtro);
-
-//     return consulta
-//         .then((resultado) => {
-//             if (resultado.exists()) {
-//                 const producto = resultado.data();
-//                 producto.id = resultado.id;
-//                 return producto;
-//             } else {
-//                 throw new Error("El producto no existe");
-//             }
-//         })
-//         .catch((error) => {
-//             console.log(error);
-//             throw error; 
-//         });
-// };
 export const getProductDetail = async (id) => {
   try {
-      const db = getFirestore(app);
-      const muñecosCollection = collection(db, "muñecos");
-      const filtro = doc(muñecosCollection, id);
-      const consulta = await getDoc(filtro);
+    const db = getFirestore(app);
+    const muñecosCollection = collection(db, "muñecos");
+    const filtro = doc(muñecosCollection, id);
+    const consulta = await getDoc(filtro);
 
-      if (consulta.exists()) {
-          const producto = consulta.data();
-          producto.id = consulta.id;
-          return producto;
-      } else {
-          throw new Error("El producto no existe");
-      }
+    if (consulta.exists()) {
+      const producto = consulta.data();
+      producto.id = consulta.id;
+      return producto;
+    } else {
+      throw new Error("El producto no existe");
+    }
   } catch (error) {
-      console.log(error);
-      throw error; // Propaga el error para que sea manejado por quien llama a esta función
+    console.log(error);
+    throw error;
   }
 };
 
-
-  
-  
-
-
-      export const createSale = () =>{
-const db= getFirestore(app)
-const salesCollection = collection(db,"ventas")
-const venta = {
-  items:[],
-  usuario: {nombre: 'Nacho',tel: '123456', email:'gp@gam.com'},
-  fechaDeCompra : serverTimestamp(),
-  status: 'pendiente',
-  total: 0
-}
-const consulta = addDoc(salesCollection,venta)
-.then((resultado)=>{
-console.log(resultado)
-})
-.catch((error)=>{
-  console.log(error)
-})
-}
-      
-
-  
+export const createSale = () => {
+  const db = getFirestore(app);
+  const salesCollection = collection(db, "ventas");
+  const venta = {
+    items: [],
+    usuario: { nombre: "Nacho", tel: "123456", email: "gp@gam.com" },
+    fechaDeCompra: serverTimestamp(),
+    status: "pendiente",
+    total: 0,
+  };
+  const consulta = addDoc(salesCollection, venta)
+    .then((resultado) => {
+      console.log(resultado);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
