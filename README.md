@@ -68,6 +68,5 @@
                                      |UsersCardContainer.jsx|
                                      |UsersCardList.jsx|
 
-![funkos](img/funkos-banner.png)
 
 
