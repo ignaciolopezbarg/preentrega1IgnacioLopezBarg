@@ -67,4 +67,4 @@ Cursada durante: 03-04/2024
                                      |UsersCardContainer.jsx|
                                      |UsersCardList.jsx|
 
-![Funkos](img/funkos-banner.webp)
+![Funkos](img/funkos-banner.png)
