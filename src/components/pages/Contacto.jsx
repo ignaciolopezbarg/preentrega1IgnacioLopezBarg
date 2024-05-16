@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Input from '../widgets/Input';
+import ContadorLikes from "../widgets/ContadorLikes";
 
 function Contacto() {
   const [aviso, setAviso] = useState(false);
@@ -52,26 +53,13 @@ function Contacto() {
         </div>
       </form>
       <form action="">
-        //Sector prueba:
-        <Input
-          placeholder="ingrese su edad"
-          type="number"
-          id="number"
-          text="edad"
-        />
-        <Input 
-        text="nombre"
-        type="text"
-        id= "nombre"
-        />
-        <Input
-          placeholder="ingrese su email"
-          text="Email"
-          type="email"
-          id="email"
-        />
+      
+    
       </form>
+      <h3 className="text-2xl text-bold text-blue-900 text-center">Nos gustaria conocer su experiencia con el uso de la pagina</h3>
+      <ContadorLikes />
     </div>
+   
   );
 }
 
