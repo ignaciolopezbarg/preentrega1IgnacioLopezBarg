@@ -1,25 +1,26 @@
-Autor del proyecto : Ignacio Lopez Barg, alumno de Coder House en el curso de REACT.
-Comision : 54090
-Docente: Horacio Gutierrez
-Cursada durante: 03-04/2024
+# REACT-VITE
+  ## Autor del proyecto : Ignacio Lopez Barg, alumno de Coder House en el curso de REACT.
+ ## Comision : 54090
+ ## Docente: Horacio Gutierrez
+### Cursada durante: 03-04/2024
 
-**Tecnologias utilizadas:
--"ant": "^0.2.0",
-    "design": "^0.1.0",
-    "firebase": "^10.11.1",
-    "lucide-react": "^0.363.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.22.3",
-    "react-toastify": "^10.0.5",
-    "tost": "^1.0.0"
-    "tailwindcss": "^3.4.1",
-    "vite": "^5.2.0"
+### Tecnologias utilizadas:
+#### -"ant": "^0.2.0",
+  ####  "design": "^0.1.0",
+  ####  "firebase": "^10.11.1",
+  ####  "lucide-react": "^0.363.0",
+  ####  "react": "^18.2.0",
+#### "react-dom": "^18.2.0",
+   #### "react-router-dom": "^6.22.3",
+   #### "react-toastify": "^10.0.5",
+   #### "tost": "^1.0.0"
+  ####  "tailwindcss": "^3.4.1",
+  ####  "vite": "^5.2.0"
 
-    Se realizo el proyecto con react-vite y la forma de acceder al mismo en pantalla es
-    con 
-    -------------------|npm run dev | ---------------
-    Estructura del proyecto:
+  ####  Se realizo el proyecto con react-vite y la forma de acceder al mismo en pantalla es
+    
+  ##  -------------------|npm run dev | ---------------
+   ## Estructura del proyecto:
 
     react_vite|
               |public| 
@@ -67,4 +68,6 @@ Cursada durante: 03-04/2024
                                      |UsersCardContainer.jsx|
                                      |UsersCardList.jsx|
 
-![Funkos](img/funkos-banner.png)
+![funkos](img/funkos-banner.png)
+
+
