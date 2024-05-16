@@ -13,16 +13,17 @@ function Contador(props) {
   };
   return (
     <div>
-      <div className="flex gap-3">
-        <button onClick={incrementar} className="p-3 rounded-xl">
-          +
-        </button>
-        <p> {numero} </p>
-        <button onClick={decrementar} className="p-3 rounded-xl">
-          -
-        </button>
-      </div>
-      <button onClick={confirmar}>Confirmar cantidad</button>
+      <div className="flex gap-5">
+  <button onClick={incrementar} className="p-4 rounded-xl bg-blue-500 hover:bg-blue-600 text-white">
+    +
+  </button>
+  <p>{numero}</p>
+  <button onClick={decrementar} className="p-4 rounded-xl bg-blue-500 hover:bg-blue-600 text-white">
+    -
+  </button>
+</div>
+
+      <button onClick={confirmar} className=" p-4 rounded-xl bg-red-500 hover:bg-red-600 text-white">Confirmar cantidad</button>
     </div>
   );
 }

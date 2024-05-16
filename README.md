@@ -26,6 +26,19 @@
               |public| 
                       _|img|
                       _|imagenes.json| 
+             |eslintrc.cjs|
+             |.gitignore|
+             |image-1.png|
+             |image.png|
+             |index.html|
+             |info.txt|
+             |package-lock.json|
+             |package.json| 
+             |postcss.config.js|
+             |tailwind.config.js|
+             |README.md|
+             |tailwind.config.js|
+             |vite.config.js|
               |src|
                   |hooks| 
                   |img| 
@@ -34,18 +47,7 @@
                   |index.css|
                   |main.jsx|
                   |utils.js|
-                  |eslintrc.cjs|
-                  |.gitignore|
-                  |index.html|
-                  |info.txt|
-                  |package-lock.json|
-                  |package.json| 
-                  |postcss.config.js|
-                  |tailwind.config.js|
-                  |README.md|
-                  |tailwind.config.js|
-                  |vite.config.js|
-
+                  
                   |components|
                              |layout| 
                                     |App.jsx|
