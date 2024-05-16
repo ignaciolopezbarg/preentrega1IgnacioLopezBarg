@@ -69,7 +69,7 @@
                                      |UsersCardList.jsx|
 
 ## Imagen de la pagina principal
-![pagina principal](./image-1.png)
+![pagina principal](./img/image-1.png)
 ## Imagen logo en el header 
 ![pagina principal](./image.png)
 
